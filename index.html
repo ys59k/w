@@ -20,23 +20,17 @@ body {
     justify-content: center;
     height: 100vh;
     text-align: center;
+
+    /* ✅ Fond sécurisé à la place de la vidéo */
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #000000);
 }
 
-/* VIDEO */
-#bg-video {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-}
-
-/* OVERLAY */
+/* OVERLAY (optionnel mais propre visuellement) */
 .overlay {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.6);
     z-index: -1;
 }
 
@@ -44,6 +38,8 @@ body {
 .container {
     max-width: 600px;
     padding: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 /* AVATAR */
@@ -98,10 +94,6 @@ p {
 </head>
 
 <body>
-
-<video autoplay muted loop playsinline id="bg-video">
-    <source src="video.mp4" type="video/mp4">
-</video>
 
 <div class="overlay"></div>
 
